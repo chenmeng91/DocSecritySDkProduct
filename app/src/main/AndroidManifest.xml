@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="docsecuritysdk.eetrust.com.docsecuritysdk">
+
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"></uses-permission>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />\
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA"></uses-permission>
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
+
+
+        <activity
+            android:name="cn.wps.moffice.demo.fileManager.ListFileActivity"
+            android:label="@string/app_name">
+
+        </activity>
+        <activity
+            android:name="cn.wps.moffice.demo.MOfficeDemoActivity"
+            android:label="@string/app_name"></activity>
+
+        <activity
+            android:name="cn.wps.moffice.demo.test.AutoTest"
+            android:label="@string/app_name"></activity>
+
+        <activity
+            android:name="cn.wps.moffice.demo.menu.ListViewParamActivity"
+            android:label="settingList"></activity>
+
+        <activity
+            android:name="cn.wps.moffice.demo.menu.OpenWayParamActivity"
+            android:label="settingList"></activity>
+
+        <activity
+            android:name="cn.wps.moffice.demo.menu.AIDLParamActivity"
+            android:label="settingList"></activity>
+
+        <activity
+            android:name="cn.wps.moffice.demo.menu.ATEditParamActivity"
+            android:label="settingList"></activity>
+
+        <service android:name="cn.wps.moffice.demo.agent.AgentMessageService">
+            <intent-filter>
+                <action android:name="cn.wps.moffice.agent.OfficeServiceAgent"></action>
+            </intent-filter>
+        </service>
+        <service android:name="cn.wps.moffice.demo.client.MOfficeClientService">
+            <intent-filter>
+                <action android:name="cn.wps.moffice.client.OfficeServiceClient" />
+            </intent-filter>
+        </service>
+
+        <service
+            android:name="cn.wps.moffice.demo.floatingview.service.FloatServiceTest"
+            android:enabled="true"
+            android:exported="true"></service>
+
+        <service
+            android:name="cn.wps.moffice.demo.floatingview.service.FloatingServiceHideView"
+            android:enabled="true"
+            android:exported="true"></service>
+
+        <receiver android:name="cn.wps.moffice.demo.broad.CloseReceiver">
+            <intent-filter>
+                <!--<action android:name="cn.wps.moffice.file.close" /> -->      <!-- 该条是就的广播intent-filter，不推荐使用 -->
+                <action android:name="cn.wps.moffice.broadcast.AfterClosed" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="cn.wps.moffice.demo.broad.SaveReceiver">
+            <intent-filter>
+                <!-- <action android:name="cn.wps.moffice.file.save" />-->        <!-- 该条是就的广播intent-filter，不推荐使用 -->
+                <action android:name="cn.wps.moffice.broadcast.AfterSaved" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="cn.wps.moffice.demo.broad.BackKeyReceiver">
+            <intent-filter>
+                <action android:name="com.kingsoft.writer.back.key.down" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="cn.wps.moffice.demo.broad.HomeKeyReceiver">
+            <intent-filter>
+                <action android:name="com.kingsoft.writer.home.key.down" />
+            </intent-filter>
+        </receiver>
+
+        <activity android:name="com.eetrust.utils.fileOpen.WordActivity"></activity>
+        <activity android:name="com.eetrust.utils.fileOpen.PresentationActivity"></activity>
+        <activity android:name="com.eetrust.utils.fileOpen.SpreadsheetActivity"></activity>
+       <activity android:name="com.artifex.mupdfdemo.openPDFActivity"></activity>
+
+
+        <provider
+
+            android:authorities="docsecuritysdk.eetrust.com.docsecuritysdk.fileprovider"
+            android:name="android.support.v4.content.FileProvider"
+            android:grantUriPermissions="true"
+            android:exported="false">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/filepaths"/>
+        </provider>
+
+        <activity android:name=".TestDBActivity">
+
+        </activity>
+
+        <activity android:name="com.eetrust.utils.fileOpen.TXTActivity">
+
+        </activity>
+    </application>
+
+</manifest>

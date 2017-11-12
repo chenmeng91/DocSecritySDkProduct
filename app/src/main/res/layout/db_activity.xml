@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_test_green_dao"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+   >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/btn_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="添加" />
+
+        <EditText
+            android:id="@+id/et_userName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/btn_add"
+            android:layout_toLeftOf="@+id/btn_add"
+            android:hint="请输入要添加的姓名" />
+
+        <Button
+            android:id="@+id/btn_delete_all"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btn_add"
+            android:text="删除全部" />
+
+        <Button
+            android:id="@+id/btn_deteleByName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/btn_delete_all"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/btn_add"
+            android:text="删除" />
+
+        <EditText
+            android:id="@+id/et_deteleUserName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/btn_delete_all"
+            android:layout_toLeftOf="@+id/btn_deteleByName"
+            android:layout_toRightOf="@+id/btn_delete_all"
+            android:hint="根据姓名删除" />
+
+        <EditText
+            android:id="@+id/et_preUserId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/btn_update"
+            android:layout_below="@+id/btn_delete_all"
+            android:layout_toLeftOf="@+id/et_afterName"
+            android:hint="被更改id" />
+
+        <EditText
+            android:id="@+id/et_afterName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/btn_update"
+            android:layout_below="@+id/btn_delete_all"
+            android:layout_toLeftOf="@+id/btn_update"
+            android:hint="更改密码的姓名" />
+
+        <Button
+            android:id="@+id/btn_update"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/btn_delete_all"
+            android:text="更改" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Id" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="姓名" />
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/select"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="查询"
+        />
+<Button
+        android:id="@+id/btn_jump"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="跳跳"
+        />
+
+
+
+</LinearLayout>

@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">MySDk</string>
+
+    <string name="zoom_in">+</string>
+    <string name="zoom_out">-</string>
+    <string name="goto_top">Top</string>
+    <string name="goto_bottom">Bottom</string>
+    <string name="goto_next">Next</string>
+    <string name="goto_prev">Prev</string>
+    <string name="goto_ok">OK</string>
+    <string name="copy_text">Copy</string>
+    <string name="hello_world">OfficeSDKDemo</string>
+    <string name="action_settings">OfficeSDKDemo</string>
+    <string name="cannot_open_file_Path">Cannot open file: %1$s</string>
+    <string name="cannot_open_buffer">Cannot open buffer</string>
+    <string name="not_supported">Not supported</string>
+</resources>

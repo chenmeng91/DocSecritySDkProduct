@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<menu>
+	<item>
+		<id>menu_id_endorsement</id>
+		<text>领导签批</text>
+	</item>
+	<item>
+		<id>menu_id_handwriter</id>
+		<text>手写</text>
+	</item>
+	<var_item>
+		<id>menu_id_comment</id>
+		<text>进入修订</text>
+	</var_item>
+	<items text = "更多" id="menu_id_group">
+		<item>
+			<id>menu_id_test1</id>
+			<text>测试1</text>
+		</item>
+		<var_item>
+			<id>menu_id_test2</id>
+			<text>测试2</text>
+		</var_item>
+	</items>
+</menu>
